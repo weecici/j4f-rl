@@ -1,6 +1,6 @@
 import gymnasium as gym
 import ale_py
-from j4f_rl.frozen_lake import *
+from j4f_rl.frozen_lake import ValueIterationAgent
 
 gym.register_envs(ale_py)
 env = gym.make(
@@ -9,7 +9,6 @@ env = gym.make(
 
 
 if __name__ == "__main__":
-    # Value Iteration test
     observation, info = env.reset()
     agent = ValueIterationAgent(env)
     agent.value_iteration()
