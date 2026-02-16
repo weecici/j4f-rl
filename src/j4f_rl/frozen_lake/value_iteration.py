@@ -2,12 +2,7 @@ import gymnasium as gym
 
 
 class Agent:
-    def __init__(
-        self,
-        env: gym.Env,
-        gamma: float = 0.99,
-        eps: float = 1e-9,
-    ):
+    def __init__(self, env: gym.Env, gamma: float = 0.99, eps: float = 1e-9):
         self.env = env.unwrapped
         self.value_table = [0 for _ in range(env.observation_space.n)]
         self.policy = [0 for _ in range(env.observation_space.n)]
