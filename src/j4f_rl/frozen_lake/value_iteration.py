@@ -1,7 +1,7 @@
 import gymnasium as gym
 
 
-class FrozenLakeAgent:
+class Agent:
     def __init__(
         self,
         env: gym.Env,
